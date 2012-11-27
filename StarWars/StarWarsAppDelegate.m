@@ -37,7 +37,8 @@
     
     NSURL *url = [NSURL fileURLWithPath:path isDirectory:NO];
     NSError *error = nil;
-    player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    NSData *songFile = [[NSData alloc] initWithContentsOfURL:url];
+    player = [[AVAudioPlayer alloc] initWithData:songFile error:&error];
     if (player == nil) {
         NSLog(@"error == %@", error);
         return YES;
