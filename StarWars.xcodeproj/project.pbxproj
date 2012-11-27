@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE04341616646442003CBAD2 /* Star_Wars_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CE04341516646442003CBAD2 /* Star_Wars_Logo.png */; };
 		CE11B58E165FF6A10075A6A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE11B58D165FF6A10075A6A6 /* UIKit.framework */; };
 		CE11B590165FF6A10075A6A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE11B58F165FF6A10075A6A6 /* Foundation.framework */; };
 		CE11B592165FF6A10075A6A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE11B591165FF6A10075A6A6 /* CoreGraphics.framework */; };
@@ -16,9 +17,13 @@
 		CE11B5A0165FF6A10075A6A6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE11B59F165FF6A10075A6A6 /* Default.png */; };
 		CE11B5A2165FF6A10075A6A6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE11B5A1165FF6A10075A6A6 /* Default@2x.png */; };
 		CE11B5A4165FF6A10075A6A6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE11B5A3165FF6A10075A6A6 /* Default-568h@2x.png */; };
+		CE11B5B4166443B60075A6A6 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = CE11B5B3166443B60075A6A6 /* View.m */; };
+		CE11B5B6166445410075A6A6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE11B5B5166445410075A6A6 /* AVFoundation.framework */; };
+		CE11B5BA166445B60075A6A6 /* starwars.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE11B5B9166445B60075A6A6 /* starwars.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE04341516646442003CBAD2 /* Star_Wars_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_Wars_Logo.png; sourceTree = "<group>"; };
 		CE11B589165FF6A10075A6A6 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE11B58D165FF6A10075A6A6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE11B58F165FF6A10075A6A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -32,6 +37,10 @@
 		CE11B59F165FF6A10075A6A6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CE11B5A1165FF6A10075A6A6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CE11B5A3165FF6A10075A6A6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CE11B5B2166443B60075A6A6 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		CE11B5B3166443B60075A6A6 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
+		CE11B5B5166445410075A6A6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CE11B5B9166445B60075A6A6 /* starwars.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = starwars.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE11B5B6166445410075A6A6 /* AVFoundation.framework in Frameworks */,
 				CE11B58E165FF6A10075A6A6 /* UIKit.framework in Frameworks */,
 				CE11B590165FF6A10075A6A6 /* Foundation.framework in Frameworks */,
 				CE11B592165FF6A10075A6A6 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +78,7 @@
 		CE11B58C165FF6A10075A6A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE11B5B5166445410075A6A6 /* AVFoundation.framework */,
 				CE11B58D165FF6A10075A6A6 /* UIKit.framework */,
 				CE11B58F165FF6A10075A6A6 /* Foundation.framework */,
 				CE11B591165FF6A10075A6A6 /* CoreGraphics.framework */,
@@ -80,6 +91,8 @@
 			children = (
 				CE11B59C165FF6A10075A6A6 /* StarWarsAppDelegate.h */,
 				CE11B59D165FF6A10075A6A6 /* StarWarsAppDelegate.m */,
+				CE11B5B2166443B60075A6A6 /* View.h */,
+				CE11B5B3166443B60075A6A6 /* View.m */,
 				CE11B594165FF6A10075A6A6 /* Supporting Files */,
 			);
 			path = StarWars;
@@ -88,6 +101,8 @@
 		CE11B594165FF6A10075A6A6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE04341516646442003CBAD2 /* Star_Wars_Logo.png */,
+				CE11B5B9166445B60075A6A6 /* starwars.mp3 */,
 				CE11B595165FF6A10075A6A6 /* StarWars-Info.plist */,
 				CE11B596165FF6A10075A6A6 /* InfoPlist.strings */,
 				CE11B599165FF6A10075A6A6 /* main.m */,
@@ -155,6 +170,8 @@
 				CE11B5A0165FF6A10075A6A6 /* Default.png in Resources */,
 				CE11B5A2165FF6A10075A6A6 /* Default@2x.png in Resources */,
 				CE11B5A4165FF6A10075A6A6 /* Default-568h@2x.png in Resources */,
+				CE11B5BA166445B60075A6A6 /* starwars.mp3 in Resources */,
+				CE04341616646442003CBAD2 /* Star_Wars_Logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +184,7 @@
 			files = (
 				CE11B59A165FF6A10075A6A6 /* main.m in Sources */,
 				CE11B59E165FF6A10075A6A6 /* StarWarsAppDelegate.m in Sources */,
+				CE11B5B4166443B60075A6A6 /* View.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +293,7 @@
 				CE11B5A9165FF6A10075A6A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

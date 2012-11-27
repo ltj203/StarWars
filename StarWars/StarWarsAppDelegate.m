@@ -7,15 +7,54 @@
 //
 
 #import "StarWarsAppDelegate.h"
+#import "View.h"
 
 @implementation StarWarsAppDelegate
+@synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIScreen *screen = [UIScreen mainScreen];
+    view = [[View alloc] initWithFrame:screen.applicationFrame];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    //self.window.backgroundColor = [UIColor whiteColor];
+    
+    [self.window addSubview:view];
     [self.window makeKeyAndVisible];
+    
+    NSBundle *bundle = [NSBundle mainBundle];
+    if (bundle == nil) {
+        NSLog(@"Could not get the main bundle");
+        return YES;
+    }
+    
+    NSString *path = [bundle pathForResource:@"starwars" ofType:@"mp3"];
+    if (path == nil) {
+        NSLog(@"could not get the path");
+        return YES;
+    }
+    
+    NSURL *url = [NSURL fileURLWithPath:path isDirectory:NO];
+    NSError *error = nil;
+    player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    if (player == nil) {
+        NSLog(@"error == %@", error);
+        return YES;
+    }
+    
+    player.volume = 5.0;
+    player.numberOfLoops = 0;
+    
+    if (![player prepareToPlay]) {
+        NSLog(@"could not prepare to play");
+        return YES;
+    }
+    
+    if (![player play]) {
+        NSLog(@"could not play");
+    }
+    
     return YES;
 }
 
